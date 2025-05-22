@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ tasks, deleteTask }) => {
+const TodoList = ({ tasks, deleteTask, editTask }) => {
   return (
     <div className="todo-list">
       {tasks.map((task) => (
-        <TodoItem key={task.id} task={task} deleteTask={deleteTask} />
+        <TodoItem key={task.id} task={task} deleteTask={deleteTask} editTask={editTask} />
       ))}
     </div>
   );
@@ -21,6 +21,7 @@ TodoList.propTypes = {
     })
   ).isRequired,
   deleteTask: PropTypes.func.isRequired,
+  editTask: PropTypes.func.isRequired,
 };
 
 export default TodoList;

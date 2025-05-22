@@ -20,11 +20,19 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const editTask = (id, newText) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, text: newText } : task
+      )
+    );
+  };
+
   return (
     <div className="app">
       <h1>📝 To-Do List</h1>
       <AddTask addTask={addTask} />
-      <TodoList tasks={tasks} deleteTask={deleteTask} />
+      <TodoList tasks={tasks} deleteTask={deleteTask} editTask={editTask} />
     </div>
   );
 };
