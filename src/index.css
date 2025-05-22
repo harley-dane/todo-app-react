@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: skyblue;
+  text-align: center;
+  padding: 20px;
+}
+
+.app {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list {
+  margin-top: 20px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+button {
+  border: none;
+  background: crimson;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-task-form input {
+  padding: 10px;
+  width: 75%;
+}
+
+.add-task-form button {
+  background: green;
+  padding: 10px;
+}
